@@ -1,0 +1,18 @@
+{
+  "npmScope": "sass",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "sass": {
+      "tags": []
+    },
+    "sass-e2e": {
+      "tags": []
+    }
+  }
+}
