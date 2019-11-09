@@ -14,13 +14,16 @@ styled-components = styling broken on initial page load, but applies on HMR.
 
 1. Install via `npx create-nx-workspace@latest sass --preset=next`
 Selecting SASS for styling
+
 ![image](https://user-images.githubusercontent.com/6055731/68525459-b67c5280-02f7-11ea-8c69-5130dfc12d6e.png)
 (note: styled-components unavailable here)
 
 2. Remove the scss default
+
 ![image](https://user-images.githubusercontent.com/6055731/68525561-09a2d500-02f9-11ea-9df7-4049b11a0cfe.png)
 
 3. Add another app, selecting styled-components
+
 ![image](https://user-images.githubusercontent.com/6055731/68525571-25a67680-02f9-11ea-85f2-6ca17cdcc1e1.png)
 
 4.  Serve and check the apps
