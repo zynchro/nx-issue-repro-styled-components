@@ -33,7 +33,8 @@
     "@zeit/next-css": "1.0.1",
     "@zeit/next-sass": "1.0.1",
     "@zeit/next-less": "1.0.1",
-    "@zeit/next-stylus": "1.0.1"
+    "@zeit/next-stylus": "1.0.1",
+    "styled-components": "4.4.0"
   },
   "devDependencies": {
     "@nrwl/workspace": "8.7.0",
@@ -63,6 +64,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "2.1.2"
+    "eslint-plugin-react-hooks": "2.1.2",
+    "@types/styled-components": "4.1.19"
   }
 }
