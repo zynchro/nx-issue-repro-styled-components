@@ -1,76 +1,66 @@
-# Sass
+# Prerequisites
+- [x] [...prerequisites]
+- [x] Scoured StackOverflow
 
-This project was generated using [Nx](https://nx.dev).
+## Expected vs Current Behavior
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+Simply put; 
+SASS = styling works beautifully.
+styled-components = styling broken on initial page load, but applies on HMR.
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+## Failure Information 
 
-## Adding capabilities to your workspace
+### Steps to Reproduce
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+1. Install via `npx create-nx-workspace@latest sass --preset=next`
+Selecting SASS for styling
+![image](https://user-images.githubusercontent.com/6055731/68525459-b67c5280-02f7-11ea-8c69-5130dfc12d6e.png)
+(note: styled-components unavailable here)
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+2. Remove the scss default
+![image](https://user-images.githubusercontent.com/6055731/68525561-09a2d500-02f9-11ea-9df7-4049b11a0cfe.png)
 
-Below are some plugins which you can add to your workspace:
+3. Add another app, selecting styled-components
+![image](https://user-images.githubusercontent.com/6055731/68525571-25a67680-02f9-11ea-85f2-6ca17cdcc1e1.png)
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+4.  Serve and check the apps
 
-## Generate an application
+| nx serve styled-components | nx serve sass |
+| - | - |
+| ![image](https://user-images.githubusercontent.com/6055731/68525625-9b124700-02f9-11ea-8584-caa88089c22a.png) | ![image](https://user-images.githubusercontent.com/6055731/68525600-5e465000-02f9-11ea-9169-63feb4430e51.png) |
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+### Context
 
-> You can use any of the plugins above to generate applications as well.
+- nx report
+```bash
+  @nrwl/angular : Not Found
+  @nrwl/cli : 8.7.0
+  @nrwl/cypress : 8.7.0
+  @nrwl/eslint-plugin-nx : 8.7.0
+  @nrwl/express : Not Found
+  @nrwl/jest : 8.7.0
+  @nrwl/linter : 8.7.0
+  @nrwl/nest : Not Found
+  @nrwl/next : 8.7.0
+  @nrwl/node : Not Found
+  @nrwl/react : 8.7.0
+  @nrwl/schematics : Not Found
+  @nrwl/tao : 8.7.0
+  @nrwl/web : 8.7.0
+  @nrwl/workspace : 8.7.0
+  typescript : 3.4.5
+```
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+- environment
+```bash
+node: v12.12.0
+npm: 6.11.3
+```
 
-## Generate a library
+- 3rd-party libraries: none
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+- use case that failed: check above reproduction steps ☝️ 
 
-> You can also use any of the plugins above to generate libraries as well.
+### Failure Logs
 
-Libraries are sharable across libraries and applications. They can be imported from `@sass/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+![image](https://user-images.githubusercontent.com/6055731/68525744-de20ea00-02fa-11ea-94a8-16588ac88c89.png)
